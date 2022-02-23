@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,14 +7,71 @@
     <title>Ishoboy Movie Finder</title>
     <link rel="icon" href="images/cover.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-light" style="background-color: #e3f2fd;"">
-    <a class="navbar-brand">Ishoboy Movie Finder🎥</a>
-    <form class="form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="Movie Title" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Movie</button>
-    </form>
+    <nav class="navbar navbar-light fixed-top" style="background-color: #e3f2fd;">
+
+    <a class="navbar-brand" href="#">Ishoboy Movie Finder🎥</a>
+    <a href="https://time.is/UTC" id="time_is_link" rel="nofollow" style="font-size:16px;">UTC/GMT:
+    <span id="UTC_za00" style="font-size:16px;"><span onclick="location='https://time.is/'" title="https://time.is/">02:38:00PM</span><br><span onclick="window.location='https://time.is/calendar'" title="https://time.is/calendar">Wednesday 23/02/22</span></span>
+    </a>
   </nav>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="mx-auto" style="width: 200px;">
+  <input placeholder="Movie Title">
+  
+
+  <button id="searchButton" class="btn btn-success" onclick="searchMovie()">Search Movie</button>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="container-md">
+
+        <img id="poster"/>
+        
+        <p> <span id="title"></span></p>
+        
+        <p> <span id="year"></span></p>
+        
+        <p> <span id="actors"></span></p>
+        
+        <p> <span id="genre"></span></p>
+        
+        <p> <span id="plot"></span></p>
+        
+        <p> <span id="director"></span></p>
+        
+        <p> <span id="writers"></span></p>
+        
+        <p> <span id="language"></span></p>
+        
+        <p> <span id="country"></span></p>
+        
+        <p> <span id="awards"></span></p>
+        
+        <p> <span id="boxOffice"></span></p>
+        
+        <p> <span id="production"></span></p>
+        
+        <p> <span id="website"></span></p>
+
+ </div>
+
+ <hr>
+ <p style="position: relative; left: 40%;" class="copyright text-muted small">Built by © <a href="https://confident-murdock-8e5bba.netlify.app/" target="_blank" rel="noopener noreferrer">Francis Artemio
+  Landia</a>. 2022.</p>
+
+  <p style="position: relative; left: 40%;">special thanks to <a href="https://omdbapi.com/" target="_blank" rel="noopener noreferrer"
+  > www.omdbapi.com</a></p>
+
+  <script src="index.js"></script>
 </body>
 </html>
