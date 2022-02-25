@@ -1,19 +1,24 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ishoboy Movie Finder</title>
-    <link rel="icon" href="images/cover.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ishoboy Movie Finder</title>
+  <link rel="icon" href="images/cover.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <nav class="navbar navbar-light fixed-top" style="background-color: #e3f2fd;">
+  <nav class="navbar navbar-light fixed-top" style="background-color: #e3f2fd;">
 
     <a class="navbar-brand" href="#">Ishoboy Movie Finder🎥</a>
-    
+
   </nav>
 
   <br>
@@ -21,55 +26,83 @@
   <br>
   <br>
 
-  <div class="mx-auto" style="width: 200px;">
-  <input placeholder="Movie Title">
-  
+  <div class="container">
+    <div class="row overflow">
+      <div class="col-12 col-sm-6">
+    
+          <div class="mx-auto" style="width: 200px;">
+            <p>Queries by Title</p>
+            <input placeholder="Movie Title">
 
-  <button id="searchButton" class="btn btn-success" onclick="searchMovie()">Search Movie</button>
+
+            <button id="searchButton" class="btn btn-success" onclick="searchMovie()">Search Movie</button>
+          </div>
+
+          <br>
+          <br>
+
+          <div class="container-md">
+
+            <img id="poster" />
+
+            <p> <span id="title"></span></p>
+
+            <p> <span id="year"></span></p>
+
+            <p> <span id="actors"></span></p>
+
+            <p> <span id="genre"></span></p>
+
+            <p> <span id="plot"></span></p>
+
+            <p> <span id="director"></span></p>
+
+            <p> <span id="writers"></span></p>
+
+            <p> <span id="language"></span></p>
+
+            <p> <span id="country"></span></p>
+
+            <p> <span id="awards"></span></p>
+
+            <p> <span id="boxOffice"></span></p>
+
+            <p> <span id="production"></span></p>
+
+            <p> <span id="website"></span></p>
+
+          </div>
+
+      </div>
+
+      <div class="col-12 col-sm-6">
+        <div class="mx-auto" style="width: 200px;">
+          <p>Queries by Search</p>
+          <input id="bySearchQuery" placeholder="Movie Title">
+
+
+          <button id="bySearchButton" class="btn btn-warning" onclick="bySearch()">Search Movie</button>
+
+          <br>
+          <br>
+          
+          <div id="appendTheSearch">
+
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <br>
-  <br>
+  <hr>
+  <p style="position: relative; left: 40%;" class="copyright text-muted small">Built by © <a
+      href="https://confident-murdock-8e5bba.netlify.app/" target="_blank" rel="noopener noreferrer">Francis Artemio
+      Landia</a>. 2022.</p>
 
-  <div class="container-md">
-
-        <img id="poster"/>
-        
-        <p> <span id="title"></span></p>
-        
-        <p> <span id="year"></span></p>
-        
-        <p> <span id="actors"></span></p>
-        
-        <p> <span id="genre"></span></p>
-        
-        <p> <span id="plot"></span></p>
-        
-        <p> <span id="director"></span></p>
-        
-        <p> <span id="writers"></span></p>
-        
-        <p> <span id="language"></span></p>
-        
-        <p> <span id="country"></span></p>
-        
-        <p> <span id="awards"></span></p>
-        
-        <p> <span id="boxOffice"></span></p>
-        
-        <p> <span id="production"></span></p>
-        
-        <p> <span id="website"></span></p>
-
- </div>
-
- <hr>
- <p style="position: relative; left: 40%;" class="copyright text-muted small">Built by © <a href="https://confident-murdock-8e5bba.netlify.app/" target="_blank" rel="noopener noreferrer">Francis Artemio
-  Landia</a>. 2022.</p>
-
-  <p style="position: relative; left: 40%;">special thanks to <a href="https://omdbapi.com/" target="_blank" rel="noopener noreferrer"
-  > www.omdbapi.com</a></p>
+  <p style="position: relative; left: 40%;">special thanks to <a href="https://omdbapi.com/" target="_blank"
+      rel="noopener noreferrer"> www.omdbapi.com</a></p>
 
   <script src="index.js"></script>
 </body>
+
 </html>
